@@ -1,0 +1,157 @@
+A revision history for the R package 'linkcomm'.
+
+Author: Alex T. Kalinka (alex.t.kalinka@gmail.com).
+
+
+
+linkcomm 1.0-11
+===============
+
+- Fixed downwards-incompatibility issue related to the "ward.D" clustering method name change.
+
+
+
+linkcomm 1.0-10
+===============
+
+- Attempted to fix file access error relating to Sparc Solaris system.
+
+
+
+linkcomm 1.0-9
+==============
+
+- Improved efficiency of edge.duplicates() function.
+
+- Fixed a small memory-usage bug in linkdensities.cpp.
+
+- Fixed memory leaks in OCG_algorithm.c.
+
+
+
+linkcomm 1.0-8
+==============
+
+- Fixed a clang-specific bug affecting the calculation of edge similarities.
+
+- Added dynamicTreeCut package to the imports field.
+
+- Added function "meta.communities" to hierarchically cluster link communities and automatically identify clusters using dynamicTreeCut.
+
+- Added function "get.community.overlaps" to find communities that share nodes.
+
+- Added function "get.shared.nodes" to extract the shared nodes between specific sets of communities.
+
+- Updated the vignette.
+
+
+
+linkcomm 1.0-7
+==============
+
+- Changed dependency from "igraph0" to "igraph".
+
+- Added support for bi-partite networks to "getLinkCommunities".
+
+- Added argument "use.all.edges" to "getLinkCommunities" to allow edge similarities to be calculated for all pairs of edges, not just those sharing a node.
+
+- Added function "linkcomm2clustnsee" to enable the export of clusters to Cytoscape and the Clust&See plug-in.
+
+- Added function "integer.edgelist" to enable conversion of networks into integer edgelists.
+
+- Fixed a bug in "newLinkCommsAt" which prevented the $edges output from being modified.
+
+- Added "fastcluster" to the Suggests field.
+
+- Changed function "getLinkDensities" to "LinkDensities".
+
+
+
+linkcomm 1.0-6
+==============
+
+- Improved memory usage during the calculation of link densities.
+
+- Added "node.pies" argument to "plotLinkCommGraph" to enable the visualization of nodes as pie charts of edge community membership.
+
+- Included "edge.duplicates" function that finds loops, duplicate and bi-directional edges using a C++ function.
+
+- Added "dist" argument to "getLinkCommunities" to allow the user to specify their own distance matrix.
+
+- Fixed a bug that prevented link dendrograms from rendering correctly when trivial clusters are included.
+
+- Fixed a bug that that led to summary plots rendering incorrectly if plotted sequentially on the same graphics device.
+
+- Modified "plotOCGraph" so that node labels overlay node symbols.
+
+- Changed Windows progress indicators to percentages.
+
+- Updated vignette documentation to highlight node pie plots.
+
+
+
+linkcomm 1.0-5
+==============
+
+- Added functions "getOCG.clusters", "plot.OCG", "read.OCG", "print.OCG", "numberEdgesIn", and "which.communities" to enable a port of the Overlapping Cluster Generator (OCG) algorithm into the linkcomm package.
+
+- Fixed a bug that prevented linkcomm summary plots from rendering correctly on different sized graphics devices.
+
+- Updated the vignette documentation to include information on the OCG algorithm and how to use it.
+
+- Changed dependency from "igraph" to "igraph0" to avoid incompatibilites, and included "utils" in the imported package list.
+
+
+
+linkcomm 1.0-4
+==============
+
+- Added functions "getEdgesIn" and "graph.feature" and modified "getNodesIn" to allow customization of network visualizations.
+
+- Added "verbose" option to "getLinkCommunities", "plotLinkCommDend", and "plotLinkCommSummary".
+
+- Added "directed" logical component to the "linkcomm" object.
+
+- Fixed a bug that led to loss of the partition density axis in "summary" plots.
+
+- Fixed a bug that prevented the correct colouring of dendrograms when several clusters merge at the same height.
+
+- Updated vignette and manual documentation.
+
+
+
+linkcomm 1.0-3
+==============
+
+- Fixed bug that prevented partition density summary plots from being saved correctly as PDFs or other file types.
+
+- Updated citation information.
+
+- Updated documentation.
+
+
+
+linkcomm 1.0-2
+==============
+
+- Fixed Windows-specific bug that prevented progress indicators from working.
+
+- Included a start-up message about documentation, demos, and read-write directory permissions.
+
+- Added a note about bidirectional edges in directed networks to the documentation for "getLinkCommunities".
+
+
+
+linkcomm 1.0-1
+==============
+
+- Windows binaries released after fixing bugs related to file reading and writing.
+
+
+
+linkcomm 1.0-0
+==============
+
+- Function-complete version of linkcomm uploaded onto CRAN. 
+
+

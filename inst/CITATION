@@ -1,0 +1,15 @@
+citHeader("To cite the 'linkcomm' package in publications use:")
+     
+citEntry(entry="Article",
+              title = "linkcomm: an R package for the generation, visualization, and analysis of link communities in networks of arbitrary size and type",
+              author = personList(as.person("Alex T Kalinka"),
+                                  as.person("Pavel Tomancak")),
+              year = "2011",
+              journal = "Bioinformatics",
+	      volume = "27",
+	      pages = "2011-2012",
+	      doi = "10.1093/bioinformatics/btr311",
+     
+              textVersion = "Kalinka, A.T. and Tomancak, P. (2011). linkcomm: an R package for the generation, visualization, and analysis of link communities in networks of arbitrary size and type. Bioinformatics 27 (14), 2011-2012.\n\ndoi:10.1093/bioinformatics/btr311"
+	)
+
