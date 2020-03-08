@@ -30,7 +30,7 @@ print.OCG <- function(x, ...)
 linkcomm2clustnsee <- function(x, file = "temp.cns", network.name = NULL)
 	{
 	# x is an object of class "linkcomm" or "OCG".
-	if(class(x)!="linkcomm" && class(x)!="OCG"){
+	if(!inherits(x,"linkcomm") && !inherits(x,"OCG")){
 		stop("input must be a linkcomm or OCG object\n")
 		}
 	if(is.null(network.name)){
@@ -152,7 +152,7 @@ getOCG.clusters <- function(network, init.class.sys = 3, max.class.card = 0, cen
 
 	del <- FALSE
 
-	if(class(network) == "data.frame" || class(network) == "matrix"){
+	if(inherits(network,"data.frame") || inherits(network,"matrix")){
 		if(ncol(network)==2){
 			numnodes = length(unique(c(as.character(network[,1]),as.character(network[,2]))))
 			write.table(network,file="OCG_input.txt",quote=FALSE,sep="\t",col.names=FALSE,row.names=FALSE)
@@ -161,7 +161,7 @@ getOCG.clusters <- function(network, init.class.sys = 3, max.class.card = 0, cen
 			cat("input network must have 2 columns\n")
 			return(invisible())
 			}
-	}else if(class(network) != "character"){
+	}else if(!inherits(network,"character")){
 		cat("network must be a data frame or matrix with 2 columns, or a valid file name\n")
 		return(invisible())
 	}else if(file.access(network) == -1){

@@ -23,7 +23,7 @@ A character string providing a name for the network. This name must correspond t
 }
 }
 \details{
-Cytoscape is an open source platform for complex-network analysis and visualization, and Clust&See (Spinelli et al. 2013) is a Cytoscape plug-in used for visualizing and manipulating the clusters produced by various network clustering algorithms (\url{http://tagc.univ-mrs.fr/tagc/index.php/clustnsee}).
+Cytoscape is an open source platform for complex-network analysis and visualization, and Clust&See (Spinelli et al. 2013) is a Cytoscape plug-in used for visualizing and manipulating the clusters produced by various network clustering algorithms.
 }
 \value{
 Used for its side-effect of writing a Clust&See partition file to disk.

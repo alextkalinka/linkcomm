@@ -167,7 +167,7 @@ getLinkCommunities <- function(network, hcmethod = "average", use.all.edges = FA
 			rm(distmatrix)
 		}else{	
 			# Did the user provide an adequate distance matrix?
-			if(class(dist) != "dist"){
+			if(!inherits(dist,"dist")){
 				stop("\ndistance matrix must be of class \"dist\" (see ?as.dist)\n")
 			}else if(attr(dist,which="Size") != len){
 				stop("\ndistance matrix size must equal the number of edges in the input network\n")

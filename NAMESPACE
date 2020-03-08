@@ -1,5 +1,9 @@
 import(igraph, RColorBrewer, dynamicTreeCut, grid, utils)
 
+importFrom("grDevices", "colorRampPalette", "dev.flush", "dev.hold")
+importFrom("graphics", "abline", "barplot", "lines", "mtext", "par","plot", "plot.new", "points", "polygon", "text")
+importFrom("stats", "as.dendrogram", "as.dist", "cor", "dendrapply","hclust", "is.leaf", "lm", "runif")
+
 export(corLinkcommCentrality, cutDendrogramAt, edge.duplicates, getAllNestedComm, getClusterRelatedness, getCommunityCentrality, getCommunityConnectedness, getCommunityMatrix, getEdgesIn, getLinkCommunities, LinkDensities, getNestedHierarchies, getNodesIn, getOCG.clusters, graph.feature, layout.spencer.circle, linkcomm2cytoscape, newLinkCommsAt, newLinkCommsAt, numberEdgesIn, orderCommunities, plotLinkCommDend, plotLinkCommGraph, plotLinkCommMembers, plotLinkCommSummComm, plotLinkCommSumm, plotOCGraph, read.OCG, which.communities, integer.edgelist, linkcomm2clustnsee, get.community.overlaps, get.shared.nodes, meta.communities)
 
 S3method(plot, linkcomm)
@@ -7,5 +11,5 @@ S3method(print, linkcomm)
 S3method(plot, OCG)
 S3method(print, OCG)
 
-useDynLib(linkcomm, edgeDuplicates, getEdgeSimilarities, hclustLinkComm, hclustPlotOrder, getLinkDensities, cutTreeAt, getJaccards, getOCGclusters, readOCG, getEdgeSimilarities_all)
+useDynLib(linkcomm, .registration = TRUE)
 

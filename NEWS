@@ -3,6 +3,12 @@ A revision history for the R package 'linkcomm'.
 Author: Alex T. Kalinka (alex.t.kalinka@gmail.com).
 
 
+linkcomm 1.0-12
+===============
+
+- Fixed class inherits issues.
+
+
 
 linkcomm 1.0-11
 ===============

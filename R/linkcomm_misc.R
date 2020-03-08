@@ -293,6 +293,7 @@ getCommunityConnectedness <- function(x, clusterids = 1:x$numbers[3], conn = "co
 			}
 		if(normalise){
 			intra <- (intra)/((length(nodes)*(length(nodes)-1))/2)
+			if(is.null(intra) || is.na(intra)) next
 			if(intra == 0){
 				inter <- NULL # Trivial cluster.
 			}else{
@@ -312,7 +313,8 @@ getCommunityConnectedness <- function(x, clusterids = 1:x$numbers[3], conn = "co
 				ratio[i] <- 0
 				}
 			}
-		}
+	}
+	if(is.null(ratio)) return(NULL)
 	names(ratio) <- clusterids
 	cat("\n")
 	
@@ -696,7 +698,7 @@ meta.communities <- function(x, hcmethod = "ward.D", deepSplit = FALSE)
 	x$clustsizes <- nn
 	names(x$clustsizes) <- 1:nc
 	# Need a new edge cluster list which merges edges into new clusters.
-	if(class(x)=="linkcomm"){
+	if(inherits(x,"linkcomm")){
 		ecl <- list()
 		for(i in 1:nc){
 			# Get old communities that belong to this new cluster.

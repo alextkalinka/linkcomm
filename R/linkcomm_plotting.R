@@ -346,7 +346,7 @@ plotLinkCommGraph <- function(x, clusterids = 1:length(x$clusters), nodes = NULL
 		cols <- append(cols, rep(col.nonclusters, length(single)))
 		}
 	drawcircle <- FALSE
-	if(class(layout)=="character"){
+	if(inherits(layout,"character")){
 		if(layout == "spencer.circle"){
 			if(length(clusters) > length(x$clusters[1:x$numbers[3]])){
 				clusterids <- 1:x$numbers[3]
@@ -410,7 +410,7 @@ plotLinkCommGraph <- function(x, clusterids = 1:length(x$clusters), nodes = NULL
 			}
 
 		cat("   Getting node layout...")
-		if(class(layout)=="function"){
+		if(inherits(layout,"function")){
 			lay <- layout(ig)
 		}else{
 			lay <- layout
