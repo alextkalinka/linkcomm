@@ -54,8 +54,5 @@ lc <- getLinkCommunities(g)
 
 ## Calculate community centrality.
 cc <- getCommunityCentrality(lc)
-
-## Calculate community centrality using "commconn" measure.
-cc <- getCommunityCentrality(lc, type = "commconn")
 }
 

@@ -266,11 +266,11 @@ plot(lc, type = "graph", clusterids = c(9,11), frame = TRUE)
 We can also explore the relationships between communities based on the numbers of shared nodes. To do this we can hierarchically cluster the communities after scoring the pair-wise similarities between them using the Jaccard coefficient (based on the number of nodes that they share).
 
 <<echo = FALSE, results = hide>>=
-cr <- getClusterRelatedness(lc, hcmethod = "ward")
+cr <- getClusterRelatedness(lc, hcmethod = "ward.D")
 @
 
 <<eval = FALSE>>=
-cr <- getClusterRelatedness(lc, hcmethod = "ward")
+cr <- getClusterRelatedness(lc, hcmethod = "ward.D")
 @
 
 
@@ -306,7 +306,7 @@ print(tt)
 \noindent When working with large networks, the algorithm will typically identify large numbers of link communities (hundreds or more), which can be difficult to handle. Therefore, it is useful to collapse these larger numbers of communitites into smaller numbers of meta-communities. This can be achieved with the {\tt meta.communities()} function, which utilises an algorithm to automatically identify clusters from a hierarchical clustering dendrogram \citep{langfelderetal2008}:
 
 <<eval = FALSE>>=
-mc <- meta.communities(lc, hcmethod = "ward", deepSplit = 0)
+mc <- meta.communities(lc, hcmethod = "ward.D", deepSplit = 0)
 @
 
 \noindent Where the {\tt deepSplit} argument, taking values from 0-4, indicates how fine-grained the clustering should be, with higher values producing more clusters. The function outputs an object of class {\tt linkcomm} but with a smaller set of larger communities.

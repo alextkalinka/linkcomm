@@ -293,7 +293,8 @@ getCommunityConnectedness <- function(x, clusterids = 1:x$numbers[3], conn = "co
 			}
 		if(normalise){
 			intra <- (intra)/((length(nodes)*(length(nodes)-1))/2)
-			if(is.null(intra) || is.na(intra)) next
+			if(is.null(intra) || is.na(intra)) 
+			  stop("unable to normalise within-cluster node counts")
 			if(intra == 0){
 				inter <- NULL # Trivial cluster.
 			}else{
@@ -314,7 +315,6 @@ getCommunityConnectedness <- function(x, clusterids = 1:x$numbers[3], conn = "co
 				}
 			}
 	}
-	if(is.null(ratio)) return(NULL)
 	names(ratio) <- clusterids
 	cat("\n")
 	
