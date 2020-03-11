@@ -25,10 +25,10 @@
 \title{The generation, visualization, and analysis of link communities in arbitrary networks with the R package \textbf{linkcomm}}
 \author{Alex T. Kalinka}
 \date{\today \\
-	alex.t.kalinka@gmail.com \\
-	\small{Institute for Population Genetics, Vetmeduni Vienna, Veterin{\"a}rplatz 1, 1210 Vienna, Austria.}}
-
+	alex.t.kalinka@gmail.com
+}
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 \maketitle
 
 
@@ -265,12 +265,8 @@ plot(lc, type = "graph", clusterids = c(9,11), frame = TRUE)
 
 We can also explore the relationships between communities based on the numbers of shared nodes. To do this we can hierarchically cluster the communities after scoring the pair-wise similarities between them using the Jaccard coefficient (based on the number of nodes that they share).
 
-<<echo = FALSE, results = hide>>=
-cr <- getClusterRelatedness(lc, hcmethod = "ward")
-@
-
 <<eval = FALSE>>=
-cr <- getClusterRelatedness(lc, hcmethod = "ward")
+cr <- getClusterRelatedness(lc, hcmethod = "ward.D")
 @
 
 
@@ -293,20 +289,13 @@ cr <- getClusterRelatedness(lc, hcmethod = "ward")
 cutDendrogramAt(cr, cutat = 1.2)
 @
 
-<<echo = FALSE, results = hide>>=
-tt <- cutDendrogramAt(cr, cutat = 1.2)
-@
-
-<<echo = FALSE>>=
-print(tt)
-@
 
 \noindent This returns the meta-communities (clusters of community IDs). Alternatively, we could have cut the dendrogram using the {\tt cutat} option in the original clustering function, {\tt getClusterRelatedness}. We can verify that these meta-communities make sense by inspecting the communities in the Spencer circle (Fig. \ref{graphs}). Note that nodes may still belong to multiple meta-communities.
 
 \noindent When working with large networks, the algorithm will typically identify large numbers of link communities (hundreds or more), which can be difficult to handle. Therefore, it is useful to collapse these larger numbers of communitites into smaller numbers of meta-communities. This can be achieved with the {\tt meta.communities()} function, which utilises an algorithm to automatically identify clusters from a hierarchical clustering dendrogram \citep{langfelderetal2008}:
 
 <<eval = FALSE>>=
-mc <- meta.communities(lc, hcmethod = "ward", deepSplit = 0)
+mc <- meta.communities(lc, hcmethod = "ward.D", deepSplit = 0)
 @
 
 \noindent Where the {\tt deepSplit} argument, taking values from 0-4, indicates how fine-grained the clustering should be, with higher values producing more clusters. The function outputs an object of class {\tt linkcomm} but with a smaller set of larger communities.
@@ -326,23 +315,8 @@ Nodes that belong to a lot of different communities will get the largest communi
 
 \noindent We can calculate this value for a set of nodes that have been assigned to link communities:
 
-<<echo = FALSE, results = hide>>=
-cc <- getCommunityCentrality(lc)
-@
-
 <<eval = FALSE>>=
 cc <- getCommunityCentrality(lc)
-@
-
-<<>>=
-head(sort(cc, decreasing = TRUE))
-@
-
-
-\noindent Comparing against the unweighted community membership, we find differences:
-
-<<>>=
-head(lc$numclusters)
 @
 
 \subsubsection{Community modularity and connectedness}
