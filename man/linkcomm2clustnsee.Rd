@@ -50,13 +50,9 @@ g <- swiss[,3:4]
 lc <- getLinkCommunities(g)
 
 ## Write a partition file to disk.
+\dontrun{
 linkcomm2clustnsee(lc)
-
-## Extract OCG communities.
-oc <- getOCG.clusters(g)
-
-## Write a partition file to disk.
-linkcomm2clustnsee(oc)
+}
 
 }
 

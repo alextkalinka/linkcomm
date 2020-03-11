@@ -44,6 +44,8 @@ g <- swiss[,3:4]
 lc <- getLinkCommunities(g)
 
 ## Write an edge attribute file to disk.
+\dontrun{
 linkcomm2cytoscape(lc)
+}
 }
 
