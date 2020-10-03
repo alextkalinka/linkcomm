@@ -9,6 +9,10 @@ linkcomm 1.0-13
 
 - Fixed return() parenthesis issue in getOCG.clusters() and read.OCG().
 
+- Fixed getCommunityCentrality() and getClusterRelatedness() issues.
+
+- Updated README; vignette PDF now static.
+
 
 linkcomm 1.0-12
 ===============

@@ -1,4 +1,9 @@
-<!-- badges: start -->  [![R build status](https://github.com/alextkalinka/linkcomm/workflows/R-CMD-check/badge.svg)](https://github.com/alextkalinka/linkcomm/actions)  <!-- badges: end -->
+<!-- badges: start -->
+  [![R build status](https://github.com/alextkalinka/linkcomm/workflows/R-CMD-check/badge.svg)](https://github.com/alextkalinka/linkcomm/actions)
+[![CRAN status](https://www.r-pkg.org/badges/version/linkcomm)](https://CRAN.R-project.org/package=linkcomm)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![metacran downloads](https://cranlogs.r-pkg.org/badges/linkcomm)](https://cran.r-project.org/package=linkcomm)
+<!-- badges: end -->
 
 
 # `linkcomm`
@@ -31,12 +36,15 @@ plot(lm, type = "graph", layout="spencer.circle")
 
 ```r
 # Extract the nodes from the first community:
-nodes_c1 <- getNodesIn(lm, clusterids = 1)
+n1 <- getNodesIn(lm, clusterids = 1)
 
 # Nodes shared by communities 10 and 11:
-nodes_sh <- get.shared.nodes(lm, comms = 10:11)
+ns <- get.shared.nodes(lm, comms = 10:11)
 
-# Community connectedness score:
-comm.conn <- getCommunityConnectedness(lm)
+# Node community centrality scores:
+nc <- getCommunityCentrality(lm)
+
+# Community connectedness scores:
+cc <- getCommunityConnectedness(lm)
 
 ```

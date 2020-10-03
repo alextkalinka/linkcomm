@@ -106,7 +106,7 @@ getCommunityCentrality <- function(x, nodes = names(x$numclusters), type = "comm
 	# Returns a measure of community centrality for nodes in the network.
 	# x is a "linkcomm" object.
 	{
-	clusterids <- unique(x$nodeclusters[x$nodeclusters[,1]%in%nodes,2])
+	clusterids <- as.integer(unique(x$nodeclusters[x$nodeclusters[,1]%in%nodes,2]))
 	if(type == "commconn"){
 		cc <- getCommunityConnectedness(x, clusterids = clusterids, normalise = normalise)
 		cd <- rep(0,length(nodes))
@@ -343,7 +343,7 @@ getClusterRelatedness <- function(x, clusterids = 1:x$numbers[3], hcmethod = "wa
 
 	emptyvec <- rep(1,(length(clusterids)*(length(clusterids)-1))/2)
 
-	dissvec <- .C("getJaccards", as.integer(nodes), as.integer(clusters), as.integer(clusterids), as.integer(numN), dissvec = as.double(emptyvec), as.logical(verbose))$dissvec
+	dissvec <- .C("getJaccards", as.integer(as.factor(nodes)), as.integer(clusters), as.integer(clusterids), as.integer(numN), dissvec = as.double(emptyvec), as.logical(verbose))$dissvec
 
 	if(cluster){
 		distmatrix <- matrix(1,length(clusterids),length(clusterids))
