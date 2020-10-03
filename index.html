@@ -98,13 +98,16 @@
 <p><img src="./imgs/spenc-circ.png"></p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="co"># Extract the nodes from the first community:</span>
-<span class="va">nodes_c1</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/getNodesIn.html">getNodesIn</a></span><span class="op">(</span><span class="va">lm</span>, clusterids <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
+<span class="va">n1</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/getNodesIn.html">getNodesIn</a></span><span class="op">(</span><span class="va">lm</span>, clusterids <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 
 <span class="co"># Nodes shared by communities 10 and 11:</span>
-<span class="va">nodes_sh</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get.shared.nodes.html">get.shared.nodes</a></span><span class="op">(</span><span class="va">lm</span>, comms <span class="op">=</span> <span class="fl">10</span><span class="op">:</span><span class="fl">11</span><span class="op">)</span>
+<span class="va">ns</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/get.shared.nodes.html">get.shared.nodes</a></span><span class="op">(</span><span class="va">lm</span>, comms <span class="op">=</span> <span class="fl">10</span><span class="op">:</span><span class="fl">11</span><span class="op">)</span>
 
-<span class="co"># Community connectedness score:</span>
-<span class="va">comm.conn</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/getCommunityConnectedness.html">getCommunityConnectedness</a></span><span class="op">(</span><span class="va">lm</span><span class="op">)</span></pre></div>
+<span class="co"># Node community centrality scores:</span>
+<span class="va">nc</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/getCommunityCentrality.html">getCommunityCentrality</a></span><span class="op">(</span><span class="va">lm</span><span class="op">)</span>
+
+<span class="co"># Community connectedness scores:</span>
+<span class="va">cc</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/getCommunityConnectedness.html">getCommunityConnectedness</a></span><span class="op">(</span><span class="va">lm</span><span class="op">)</span></pre></div>
 </div>
 </div>
 
@@ -141,6 +144,9 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://github.com/alextkalinka/linkcomm/actions"><img src="https://github.com/alextkalinka/linkcomm/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://CRAN.R-project.org/package=linkcomm"><img src="https://www.r-pkg.org/badges/version/linkcomm" alt="CRAN status"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#stable"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
+<li><a href="https://cran.r-project.org/package=linkcomm"><img src="https://cranlogs.r-pkg.org/badges/linkcomm" alt="metacran downloads"></a></li>
 </ul>
 </div>
 </div>
