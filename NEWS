@@ -3,6 +3,13 @@ A revision history for the R package 'linkcomm'.
 Author: Alex T. Kalinka (alex.t.kalinka@gmail.com).
 
 
+
+linkcomm 1.0-13
+===============
+
+- Fixed return() parenthesis issue in getOCG.clusters() and read.OCG().
+
+
 linkcomm 1.0-12
 ===============
 

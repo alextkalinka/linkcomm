@@ -2,6 +2,10 @@
 .Rhistory
 .Rapp.history
 
+*.so
+*.o
+*.Rproj
+
 vignettes/.DS_Store
 .DS_Store
 

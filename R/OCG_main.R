@@ -84,7 +84,7 @@ read.OCG <- function(file, elfile = NULL, verbose = FALSE, keep.out = FALSE)
 		edgelist <- read.table(file = elfile, header = FALSE)
 	}else{
 		cat("No edgelist file specified...\n")
-		return
+		return(invisible())
 		}
 
 	ret <- list()
@@ -215,7 +215,7 @@ getOCG.clusters <- function(network, init.class.sys = 3, max.class.card = 0, cen
 		if(del){
 			file.remove("OCG_input.txt")
 			}
-		return
+		return(invisible())
 		}
 
 	}
