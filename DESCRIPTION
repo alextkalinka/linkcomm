@@ -15,7 +15,7 @@ Description: Link communities reveal the nested and overlapping
     generating, visualizing, and analysing Overlapping Cluster Generator
     (OCG) communities.
 License: GPL (>= 2)
-URL: https://alextkalinka.github.io/linkcomm/,
+URL: https://alextkalinka.github.io/linkcomm,
     https://github.com/alextkalinka/linkcomm
 Depends: 
     igraph,
