@@ -13,9 +13,9 @@ Description: Link communities reveal the nested and overlapping
     generating, visualizing, and analysing link communities in networks of
     arbitrary size and type. The linkcomm package also includes tools for
     generating, visualizing, and analysing Overlapping Cluster Generator
-    (OCG) communities.
+    (OCG) communities. Kalinka and Tomancak (2011) <10.1093/bioinformatics/btr311>.
 License: GPL (>= 2)
-URL: https://alextkalinka.github.io/linkcomm,
+URL: https://alextkalinka.github.io/linkcomm/,
     https://github.com/alextkalinka/linkcomm
 Depends: 
     igraph,

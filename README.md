@@ -28,7 +28,7 @@ lm <- getLinkCommunities(lesmiserables)
 
 ```r
 # Visualize the communities:
-plot(lm, type = "graph", layout="spencer.circle")
+plot(lm, type = "graph", layout = "spencer.circle")
 ```
 
 ![](./imgs/spenc-circ.png)
@@ -47,3 +47,7 @@ nc <- getCommunityCentrality(lm)
 cc <- getCommunityConnectedness(lm)
 
 ```
+
+# References
+
+Kalinka AT, Tomancak P (2011). “linkcomm: an R package for the generation, visualization, and analysis of link communities in networks of arbitrary size and type.” *Bioinformatics*, **27**, 2011-2012.
