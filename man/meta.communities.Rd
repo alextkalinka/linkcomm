@@ -40,7 +40,7 @@ An object of class \code{linkcomm}, which is a list containing the following com
 \item{edges }{A data frame with 3 columns; the first two contain nodes that interact with each other, and the third is an integer vector of community IDs indicating community membership for each link.}
 \item{numclusters }{A named integer vector. Names are node names and integer values are the number of communities to which each node belongs.}
 \item{clustsizes }{A named integer vector. Names are community IDs and integer values indicate the number of nodes that belong in each community.}
-\item{igraph }{An object of class \code{\link{igraph}}. The network is represented here as an \code{igraph} object.}
+\item{igraph }{An object of class \code{\link[igraph]{igraph}}. The network is represented here as an \code{igraph} object.}
 \item{edgelist }{A character matrix with 2 columns containing the nodes that interact with each other.}
 \item{directed }{Logical indicating whether the network is directed.}
 \item{bipartite }{Logical indicating whether the network is bi-partite.}

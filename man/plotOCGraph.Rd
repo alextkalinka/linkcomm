@@ -85,7 +85,7 @@ Various graph layouts are available:
 \item \code{layout.svd}
 \item \code{layout.norm}
 }
-All of these are described in more detail in the \code{\link{igraph}} package.
+All of these are described in more detail in the \code{\link[igraph]{igraph}} package.
 }
 \value{
 A graph plot.
@@ -98,7 +98,7 @@ Alex T. Kalinka \email{alex.t.kalinka@gmail.com}
 }
 
 \seealso{
-\code{\link{plot.OCG}}, \code{\link{igraph.plotting}}
+\code{\link{plot.OCG}}, \code{\link[igraph]{igraph.plotting}}
 }
 \examples{
 ## Generate graph and extract OCG communities.

@@ -1,19 +1,21 @@
 Type: Package
 Package: linkcomm
-Title: Tools for Generating, Visualizing, and Analysing Link
-    Communities in Networks
-Version: 1.0-14
-Date: 2021-02-03
-Author: Alex T. Kalinka <alex.t.kalinka@gmail.com>, with
-    contributions from Alain Guenoche
-Maintainer: Alex T. Kalinka <alex.t.kalinka@gmail.com>
-Description: Link communities reveal the nested and overlapping
-    structure in networks, and uncover the key nodes that form connections
-    to multiple communities. linkcomm provides a set of tools for
-    generating, visualizing, and analysing link communities in networks of
-    arbitrary size and type. The linkcomm package also includes tools for
+Title: Tools for Generating, Visualizing, and Analysing Link Communities
+    in Networks
+Version: 1.0-15
+Date: 2025-06-22
+Authors@R: c(
+    person("Alex", "Kalinka", , "alex.t.kalinka@gmail.com", role = c("aut", "cre")),
+    person("Alain", "Guenoche", role = "ctb")
+  )
+Description: Link communities reveal the nested and overlapping structure
+    in networks, and uncover the key nodes that form connections to
+    multiple communities. linkcomm provides a set of tools for generating,
+    visualizing, and analysing link communities in networks of arbitrary
+    size and type. The linkcomm package also includes tools for
     generating, visualizing, and analysing Overlapping Cluster Generator
-    (OCG) communities. Kalinka and Tomancak (2011) <doi:10.1093/bioinformatics/btr311>.
+    (OCG) communities. Kalinka and Tomancak (2011)
+    <doi:10.1093/bioinformatics/btr311>.
 License: GPL (>= 2)
 URL: https://alextkalinka.github.io/linkcomm/,
     https://github.com/alextkalinka/linkcomm

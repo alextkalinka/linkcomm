@@ -31,7 +31,7 @@ Spencer, R. (2010). \url{http://scaledinnovation.com/analytics/communities/comli
 }
 
 \seealso{
-\code{\link{getLinkCommunities}}, \code{\link{getOCG.clusters}}, \code{\link{plot.linkcomm}}, \code{\link{pp_rnapol}}, \code{\link{lesmiserables}}, \code{\link{karate}}, \code{\link{weighted}}, \code{\link{igraph}}, \code{\link{RColorBrewer}}, \code{\link{grid}}
+\code{\link{getLinkCommunities}}, \code{\link{getOCG.clusters}}, \code{\link{plot.linkcomm}}, \code{\link{pp_rnapol}}, \code{\link{lesmiserables}}, \code{\link{karate}}, \code{\link{weighted}}, \code{\link[igraph]{igraph}}, \code{\link[RColorBrewer]{RColorBrewer}}, \code{\link{grid}}
 }
 \examples{
 ## Generate graph and extract link communities.

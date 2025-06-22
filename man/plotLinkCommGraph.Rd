@@ -128,7 +128,7 @@ Various graph layouts are available:
 \item \code{layout.svd}
 \item \code{layout.norm}
 }
-All of these, except the \code{"spencer.circle"}, are described in more detail in the \code{\link{igraph}} package. The \code{"spencer.circle"} is described in \code{\link{layout.spencer.circle}}.
+All of these, except the \code{"spencer.circle"}, are described in more detail in the \code{\link[igraph]{igraph}} package. The \code{"spencer.circle"} is described in \code{\link{layout.spencer.circle}}.
 }
 \value{
 A graph plot.
@@ -141,7 +141,7 @@ Alex T. Kalinka \email{alex.t.kalinka@gmail.com}
 }
 
 \seealso{
-\code{\link{plot.linkcomm}}, \code{\link{layout.spencer.circle}}, \code{\link{graph.feature}}, \code{\link{igraph.plotting}}
+\code{\link{plot.linkcomm}}, \code{\link{layout.spencer.circle}}, \code{\link{graph.feature}}, \code{\link[igraph]{igraph.plotting}}
 }
 \examples{
 ## Generate graph and extract link communities.
